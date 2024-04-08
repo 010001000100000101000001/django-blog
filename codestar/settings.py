@@ -25,12 +25,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-xv-x(&^$a$cvzdqxbnxm7$-abs*+1u@emtbb102$--b*gf9in3'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['8000-010001000100-djangoblog-cggr5mwxicp.ws-eu110.gitpod.io', 'django-blog-new-21411e0a25f2.herokuapp.com']
+ALLOWED_HOSTS = ['8000-010001000100-djangoblog-xxsynss2vo3.ws-eu110.gitpod.io', 'django-blog-new-21411e0a25f2.herokuapp.com']
 
 
 # Application definition
@@ -132,5 +132,3 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-SECRET_KEY = os.environ.get("SECRET_KEY")
