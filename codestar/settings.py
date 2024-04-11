@@ -28,9 +28,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['8000-010001000100-djangoblog-xxsynss2vo3.ws-eu110.gitpod.io', 'django-blog-new-21411e0a25f2.herokuapp.com']
+ALLOWED_HOSTS = ['8000-010001000100-djangoblog-i0cirhfxahu.ws-eu110.gitpod.io', 'django-blog-new-21411e0a25f2.herokuapp.com']
 
 
 # Application definition
