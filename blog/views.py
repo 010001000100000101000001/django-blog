@@ -37,7 +37,7 @@ def post_detail(request, slug):
             comment.author = request.user
             comment.post = post
             comment.save()
-            messages.success(request, 'Comment submitted and awaiting approval')
+            messages.success(request, 'Comment awaiting approval')
 
     comment_form = CommentForm()
 
@@ -83,6 +83,7 @@ def comment_edit(request, slug, comment_id):
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
+
 def comment_delete(request, slug, comment_id):
     """
     Delete an individual comment.
@@ -102,6 +103,7 @@ def comment_delete(request, slug, comment_id):
         comment.delete()
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(request, messages.ERROR, 'Unable to delete!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+    
